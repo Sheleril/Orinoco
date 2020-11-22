@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel= "stylesheet" href="./home.css">
+        <script src="./JavaScript/panierTest.js" defer async></script>
+        <title>Orinoc'Ours | Panier</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Orinoc'Ours</h1>
+            <h2>La fabric' à Ourson 100% Française</h2>
+        </header>
+        <nav class="nav-basket">
+            <ul>
+                <li><a href="./index.html">Retour</a></li>
+            </ul>
+        </nav>
+        <main id="basket-product">
+            <h3>Mon panier</h3>
+            <section id="basket-section">
+            </section>
+            <div id="total-price-to-pay">
+            </div>
+            <section id="form-basket">
+                <div>
+                <h4>Formulaire à remplir</h4>
+                <form id="formulaire">
+                        <label for="nom">Nom : </label><input type="text" name="nom" id="nom" pattern="[a-zA-ZÀ-ÿ]{1,30}" required />
+                        <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom" pattern="[a-zA-ZÀ-ÿ]{1,30}" required />
+                        <label for="mail">Mail : </label><input type="email" name="mail" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+                        <label for="address">Adresse : </label><input type="text" name="address" id="Address" pattern="[A-Z-a-z-0-9\s]{5,80}" required/>
+                        <label for="town">Ville : </label><input type="text" name="town" id="town" pattern="[a-zA-ZÀ-ÿ]{2,80}" required/>
+
+                        <button type="submit" value="Passer la commande" id="send-button-basket">Test</button>
+                </form>
+            </div>
+            </section>
+        </main>
+    </body>
+</html>

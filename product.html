@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <!--<link rel="manifest" href="/site.webmanifest">-->
+        <link rel= "stylesheet" href="./home.css">
+        <!--<script src="https://kit.fontawesome.com/ca6c030e6d.js" crossorigin="anonymous"></script><!-->
+        <script src="./JavaScript/product.js" defer async></script> 
+        <title>Orinoc'Ours | Produits</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Orinoc'Ours</h1>
+            <h2>La fabric' à Ourson 100% Française</h2>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="./panier.html">Mon panier</a><span id="cart_count"></span></li>
+                <li><a href="./index.html">Retour</a></li>
+            </ul>
+        </nav>
+        <main id="product">
+        <section id="teddy">
+            <h3 id="teddy-name"></h3>
+            <img />
+            <p></p>
+            <aside>
+                <p></p>
+            </aside>
+        </section>
+        <form id="form-teddy-color">
+        <div class="colors" id="color-change-5x">
+                <p>Choisissez la couleur de votre ourson : </p>
+                <select name="color" id="color">
+                </select>
+        </div>
+        <div class="quantite">
+                <label for id="quantite">Quantité : </label><input type="number" id="quantity" name="quantity" min="1" max="10" required>
+        </diV>
+        <div class="ajout-basket">
+                <!--<i class="fas fa-cart-plus"></i><!--><input type="button" value="Ajouter au panier" id="add-product-button">
+        </div>
+        <input type ="hidden" name ="price" id="price">
+        </form>
+        </main>
+
+        <footer>
+            <nav>
+                <div><a href="./mentions.html">Mentions Légales</a></div>
+            </nav>
+        </footer>
+    </body>
+</html>

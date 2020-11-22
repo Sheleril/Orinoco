@@ -1,0 +1,395 @@
+@font-face{
+    font-family: 'sacramento';
+    src: url(./police/Sacramento-Regular.ttf);
+}
+
+/* BODY */
+body{
+    font-family: "sacramento", "sans-serif";
+    font-weight: bold;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#cart_count{
+    display: inline-block;
+    text-align: center;
+    background-color: #f10;
+    color: white;
+    font-weight: 700;
+    font-size: 13px;
+    min-width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 20px;
+}
+#nounours{
+    display: flex;
+}
+/* END BODY */
+
+/* PARTIE HEADER */
+header{
+    display: flex;
+    flex-direction: column;
+    background-color:  #D6A4A4;
+    width: 100%;
+}
+header h1, h2{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0;
+}
+header h1{
+    margin-bottom: 0;
+    font-size: 4em;
+}
+header h2{
+    margin-top: 0;
+}
+/* FIN HEADER */
+
+/* PAGE PRODUCT */
+.colors{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.colors select{
+    margin-bottom: 5%;
+}
+#teddy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#teddy h3{
+    font-size: 3em;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+#teddy p{
+    font-size: 1.5em;
+    text-align: center;
+}
+#teddy aside{
+    width: 70%;
+}
+#teddy aside p{
+    margin-top: 0;
+}
+.quantite, .colors p{
+    font-size: 1.5em;
+}
+#form-teddy-color{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+.quantite{
+    margin-bottom: 20px;
+}
+.ajout-basket{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#total-price-to-pay{
+    font-size: 1.5em;
+    margin-top: 5%;
+}
+.delete-button{
+    border-radius: 5em;
+}
+
+#color-change-5x p {
+      text-align: center;
+} 
+
+/*BOUTON EFFECT*/
+button, .ajout-basket input, #send-button-basket{
+    background-image: linear-gradient(to right, #DAE2F8 0%, #D6A4A4  51%, #DAE2F8  100%)
+}
+button,  .ajout-basket input, #send-button-basket{
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+button:hover, .ajout-basket input:hover, #send-button-basket:hover {
+   background-position: right center; 
+   color: #fff;
+   text-decoration: none;
+ }
+
+
+/* END PAGE PRODUCT */
+
+/* PAGE PANIER */
+#basket-product{
+    text-align: center;
+}
+#basket-product h3{
+    font-size: 2em;
+}
+#para{
+    font-size: 1.8em;
+}
+#basket-section article{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px; 
+    padding: 5px;
+    border: 3px black outset; 
+    font-size: larger;
+}
+#basket-section h4{
+    margin-top: 15px;
+}
+#basket-section img {
+    width: 15vw;
+    height: 10vw;
+}
+/*#basket-section p{
+    width: 15%;
+}*/
+#form-basket{
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 5%;
+}
+#form-basket form{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+#form-basket label{
+    font-size: 1.3em;
+}
+#form-basket form input{
+    margin-bottom: 10px;
+    appearance: inherit;
+    border-color: crimson;
+    border-radius: 5em;
+}
+#form-basket h4{
+    font-size: x-large;
+}
+#send-button-basket{
+    appearance: inherit;
+    border-color: deeppink;
+    margin: 30px;
+}
+
+#add-product-button{
+    border-radius: 5em;
+}
+.img-product{
+    border: dashed 2px #41403E;
+}
+/* END PAGE PANIER */
+
+/* PAGE ABOUT */
+#about{
+    margin: 5%;
+    text-align: justify;
+    font-size: x-large;
+}
+/* END PAGE ABOUT */
+
+/* PAGE CONFIRM */
+#send-confirm-commande{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: x-large;
+}
+#send-confirm-commande h3{
+    text-align: center;
+}
+#confirm-block{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background-color: lightgray;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5%;
+    font-size: x-large;
+}
+/* END PAGE CONFIRM */
+
+/* PAGE MENTIONS */
+#legal-mention{
+    margin: 5%;
+    text-align: justify;
+    font-size: small;
+    font-family: sans-serif;
+}
+/* END PAGE MENTIONS */
+
+/* PAGE CONTACT */
+#contact h3{
+    text-align: center;
+}
+#contact{
+    margin-bottom: 40px;
+}
+#contact label{
+    padding: 2%;
+}
+#contact form{
+    display: flex;
+    align-items: center;
+}
+#info{
+    flex-direction: column;
+}
+#info input, textarea{
+    appearance: inherit;
+    border-color: crimson;
+}
+#help-contact-form{
+    flex-direction: column;
+}
+/*END PAGE CONTACT */
+
+/* PAGE INDEX */
+.produit{
+    margin: 5%;
+    text-align: center;
+}
+img{
+    display: flex;
+    width: 400px;
+    height: 250px;
+    border: 5px solid black;
+    background-color: black;
+}
+
+nav ul{
+    display: flex;
+    background-color:  #DAE2F8;
+    padding: 0;
+    margin: 0;
+}
+ul li{
+    width: 100%;
+    list-style: none;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 1.5em;
+}
+footer{
+    background-color:  #D6A4A4;
+    height: 50px;
+}
+footer nav{
+    display: flex;
+    justify-content: space-between;
+}
+footer nav div{
+    text-align: center;
+    margin: auto;
+}
+footer div a{
+    text-decoration: none;
+    color: black;
+    font-size: 2em;
+}
+li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+}
+#contenu{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.color{
+    width: 70%;
+}
+.produit h3{
+    font-size: 2em;
+}
+.produit a{
+    font-size: 1.3em;
+    text-decoration: none;
+    background-color: bisque;
+    border-radius: 15px;
+    
+}
+
+/* END PAGE INDEX */
+
+/*DEBUT RESPONSIVE PAGE FORMULAIRE*/
+@media screen and (max-width: 750px){
+}
+/*DEBUT RESPONSIVE PETIT ECRAN*/
+@media screen and (max-width: 430px){
+    img{
+        width: 70vw;
+        height: 50vw;
+    }
+    li a{
+        font-size: 0.8em;
+        margin-right: 10px;
+    }
+    header h1{
+        font-size: 2.5em;
+    }
+    header h2{
+        font-size: 1.3em;
+    }
+    #contenu .produit h3{
+        font-size: x-large;
+    }
+    footer nav{
+        font-size: 0.8em;
+    }
+    footer nav div{
+        margin: auto;
+    }
+    .nav-start ul{
+        padding: 0;
+    }
+    .colors form{
+        flex-direction: column;
+        text-align: center;
+    }
+    .quantite form{
+        flex-direction: column;
+    }
+    #basket-section article{
+        display: flex;
+        flex-direction: column;
+    }
+    #basket-section article h4{
+        margin: 0;
+    }
+    #basket-section article img{
+        margin: auto;
+    }
+    #basket-section article p {
+        margin: 3%;
+    }
+    #form-basket{
+        width: 70%;
+    }
+}
+/* FIN RESPONSIVE PETIT ECRAN*/
+
+/* TEST */
