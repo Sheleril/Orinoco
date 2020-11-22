@@ -31,5 +31,6 @@ function totalPriceToPay(cart){
 //CLEAN THE LOCALSTORAGE 
 localStorage.clear()
 
+//SEND FUNCTION
 addDetailOrder()
 totalPriceToPay(cart)
