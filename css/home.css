@@ -217,6 +217,7 @@ button:hover, .ajout-basket input:hover, #send-button-basket:hover {
 }
 #send-confirm-commande h3{
     text-align: center;
+    text-decoration: double black;
 }
 #confirm-block{
     display: flex;

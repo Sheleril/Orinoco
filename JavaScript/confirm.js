@@ -23,7 +23,7 @@ function totalPriceToPay(cart){
     }
     let eltDetail = document.getElementById('confirm-block')
     let contenu = document.createElement('p')
-    let eltPrice = document.createTextNode(`Voici le montant total de votre commande : ${total/100} €`)
+    let eltPrice = document.createTextNode(`Et le montant total de votre commande est de : ${total/100} €`)
     eltDetail.appendChild(contenu)
     contenu.appendChild(eltPrice)
 }

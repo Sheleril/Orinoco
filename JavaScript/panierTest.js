@@ -135,8 +135,13 @@ function totalPriceToPay(cart, parent){
 let basketValidate = document.getElementById('send-button-basket')
 
 // TARGET FORMS AND SEND IT
-function test(event){
+function sendApi(event){
 
+    if(cart.length === 0){
+        event.preventDefault()
+        alert(`Veuillez remplir votre panier s'ils vous plait`)
+    }
+    else{
     //VARIABLES FOR TARGET FORMS
     let contact = {
         lastName: document.getElementById('prenom').value,
@@ -179,7 +184,8 @@ function test(event){
     request.open('POST', 'http://localhost:3000/api/teddies/order')
     request.setRequestHeader('Content-Type', 'application/json')
     request.send(buy)
+    }
 } 
 
 //LISTEN TO THE BUTTON TO THE CLICK FOR THE FUNCTION
-basketValidate.addEventListener('click', test)
+basketValidate.addEventListener('click', sendApi)
