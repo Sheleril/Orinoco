@@ -229,6 +229,11 @@ button:hover, .ajout-basket input:hover, #send-button-basket:hover {
     margin-bottom: 5%;
     font-size: x-large;
 }
+
+#confirm-block p{
+    font-family: monospace, sans-serif;
+    font-size: medium;
+}
 /* END PAGE CONFIRM */
 
 /* PAGE MENTIONS */
@@ -337,7 +342,17 @@ li a{
 /* END PAGE INDEX */
 
 /*DEBUT RESPONSIVE PAGE FORMULAIRE*/
-@media screen and (max-width: 750px){
+@media screen and (max-width: 650px){
+    #basket-section article{
+        display: flex;
+        flex-direction: column;
+    }
+    #basket-section article img{
+        margin: auto;
+    }
+    #basket-section article h4{
+        margin: 0;
+    }
 }
 /*DEBUT RESPONSIVE PETIT ECRAN*/
 @media screen and (max-width: 430px){
@@ -389,6 +404,9 @@ li a{
     }
     #form-basket{
         width: 70%;
+    }
+    #send-confirm-commande{
+        text-align: center;
     }
 }
 /* FIN RESPONSIVE PETIT ECRAN*/

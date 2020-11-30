@@ -141,7 +141,34 @@ function sendApi(event){
         event.preventDefault()
         alert(`Veuillez remplir votre panier s'ils vous plait`)
     }
+
     else{
+
+        if (document.getElementById('prenom').value == ""){
+            //alert ("Veuillez entrer votre prénom!");
+            return false;
+            }
+        
+            if (document.getElementById('nom').value == ""){
+             //alert ("Veuillez entrer votre nom!");
+             return false;
+            }
+        
+            if (document.getElementById('mail').value == ""){
+                //alert ("Veuillez entrer votre e-mail!");
+                return false;
+            }
+        
+            if (document.getElementById('Address').value == ""){
+                //alert ("Veuillez entrer votre adresse!");
+               return false;
+            }
+    
+            if (document.getElementById('town').value == ""){
+               // alert ("Veuillez entrer votre ville!");
+                return false;
+            }
+
     //VARIABLES FOR TARGET FORMS
     let contact = {
         lastName: document.getElementById('prenom').value,
@@ -153,7 +180,7 @@ function sendApi(event){
 
     //PARAMETER FOR BUTTON EVENT 
     event.preventDefault();
-   
+    
     //INITIALIZATION OF THE EMPTY TABLE FOR THE ID OF THE TEDDYS
     let products = []
     //LOOP THROUGH LOCALSTORAGE PRODUCTS
@@ -184,8 +211,8 @@ function sendApi(event){
     request.open('POST', 'http://localhost:3000/api/teddies/order')
     request.setRequestHeader('Content-Type', 'application/json')
     request.send(buy)
-    }
-} 
+}
+}
 
 //LISTEN TO THE BUTTON TO THE CLICK FOR THE FUNCTION
 basketValidate.addEventListener('click', sendApi)
