@@ -137,6 +137,9 @@ let basketValidate = document.getElementById('send-button-basket')
 // TARGET FORMS AND SEND IT
 function sendApi(event){
 
+    //VARIABLE TEST REGEX
+    let testPrenomNomVilleValid = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/
+
     if(cart.length === 0){
         event.preventDefault()
         alert(`Veuillez remplir votre panier s'ils vous plait`)
@@ -144,30 +147,22 @@ function sendApi(event){
 
     else{
 
-        if (document.getElementById('prenom').value == ""){
-            //alert ("Veuillez entrer votre prénom!");
-            return false;
-            }
-        
-            if (document.getElementById('nom').value == ""){
-             //alert ("Veuillez entrer votre nom!");
-             return false;
-            }
-        
-            if (document.getElementById('mail').value == ""){
-                //alert ("Veuillez entrer votre e-mail!");
-                return false;
-            }
-        
-            if (document.getElementById('Address').value == ""){
-                //alert ("Veuillez entrer votre adresse!");
-               return false;
-            }
-    
-            if (document.getElementById('town').value == ""){
-               // alert ("Veuillez entrer votre ville!");
-                return false;
-            }
+        //CONDITION FOR REGEX
+        if (testPrenomNomVilleValid.test(document.getElementById('nom').value) == false){
+            event.preventDefault()
+            alert("Votre nom n'est pas conforme")
+        }
+        else 
+        if (testPrenomNomVilleValid.test(document.getElementById('prenom').value) == false){
+            event.preventDefault()
+            alert("Votre prenom n'est pas conforme")
+        }
+        else
+        if (testPrenomNomVilleValid.test(document.getElementById('town').value) == false){
+            event.preventDefault()
+            alert("Le nom de votre ville n'est pas conforme")
+        }
+        else{
 
     //VARIABLES FOR TARGET FORMS
     let contact = {
@@ -213,6 +208,8 @@ function sendApi(event){
     request.send(buy)
 }
 }
+}
+
 
 //LISTEN TO THE BUTTON TO THE CLICK FOR THE FUNCTION
 basketValidate.addEventListener('click', sendApi)
