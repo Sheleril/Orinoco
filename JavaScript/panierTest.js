@@ -139,6 +139,8 @@ function sendApi(event){
 
     //VARIABLE TEST REGEX
     let testPrenomNomVilleValid = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/
+    let testMailValid = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+    let testAddressValid = /^[A-Z-a-z-0-9\s]{5,80}$/
 
     if(cart.length === 0){
         event.preventDefault()
@@ -162,8 +164,18 @@ function sendApi(event){
             event.preventDefault()
             alert("Le nom de votre ville n'est pas conforme")
         }
+        else
+        if (testAddressValid.test(document.getElementById('Address').value) == false){
+            event.preventDefault()
+            alert("Votre adresse n'est pas conforme")
+        }
+        else
+        if (testMailValid.test(document.getElementById('mail').value) ==  false){
+            event.preventDefault()
+            alert("Votre email n'est pas conforme")
+        }
         else{
-
+        
     //VARIABLES FOR TARGET FORMS
     let contact = {
         lastName: document.getElementById('prenom').value,
